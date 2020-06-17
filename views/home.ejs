@@ -1,0 +1,13 @@
+<%- include("partials/header"); -%>
+ <h1>Home</h1>
+ <p> <%= startingContent %> </p>
+<h5 style="background-color:powderblue;" style="font-family:verdana;">NOT ALL THOSE WHO WANDER ARE LOST” ~ J.R.R. TOLKIEN</h5>
+ <% posts.forEach(function(Post){ %>
+ <h3> <%= Post.title %> </h3>
+  <p> <%= Post.content %>
+  <a href="/">Read More</a>
+ </p>
+ <% }) %>
+<a class="btn btn-light btn-lg" href="/register" role="button">Register</a>
+    <a class="btn btn-dark btn-lg" href="/login" role="button">Login</a>
+<%- include("partials/footer"); -%>
